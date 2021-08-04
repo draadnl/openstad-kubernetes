@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-0.16.0-beta-f2e21db-748198176
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:feature-0.11-fix-double-email-2be696e-986713624
+    image: draadnl/openstad-oauth2-server:feature-0.11-fix-double-email-2fa6068-1097950063
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feature-release-0.15.1.beta-1-b486bd1-898776759
