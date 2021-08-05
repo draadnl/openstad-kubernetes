@@ -10,7 +10,7 @@ metadata:
 spec:
   replicas: {{ .Values.frontend.replicas }}
   strategy:
-    type: Recreate
+    type: RollingUpdate
   selector:
     matchLabels:
       app: {{ .Values.frontend.label }}
