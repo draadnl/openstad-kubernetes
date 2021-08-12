@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-0.16.0-beta-f2e21db-748198176
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:feature-0.11-haarlemmermeer-streetname-as-email-16dc014-1104438350
+    image: draadnl/openstad-oauth2-server:feature-0.11-haarlemmermeer-streetname-as-email-3b11f49-1124819733
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feature-release-0.15.1.beta-1-b486bd1-898776759
