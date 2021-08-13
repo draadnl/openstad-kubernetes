@@ -26,6 +26,8 @@ spec:
             - name: http
               containerPort: {{ .Values.image.service.httpPort }}
         env:
+          - name: TZ
+            value: {{ template "openstad.timezone" . }}
           - name: DB_HOST
             valueFrom:
               secretKeyRef:

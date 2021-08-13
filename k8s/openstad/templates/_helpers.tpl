@@ -182,3 +182,7 @@ imagePullSecrets:
   - name: {{ .Values.imagePullSecret }}
 {{- end -}}
 {{- end -}}
+
+{{- define "openstad.timezone" -}}
+{{- default "Europe/Amsterdam" .Values.timezone }}
+{{- end -}}

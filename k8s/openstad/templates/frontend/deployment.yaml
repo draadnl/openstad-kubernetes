@@ -29,6 +29,8 @@ spec:
               containerPort: {{ .Values.frontend.service.httpPort }}
               protocol: TCP
           env:
+            - name: TZ
+              value: {{ template "openstad.timezone" . }}
             - name: DEFAULT_HOST
               value: www.{{ .Values.host.base }}
             - name: APP_URL

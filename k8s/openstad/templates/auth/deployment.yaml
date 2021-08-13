@@ -34,6 +34,9 @@ spec:
             - name: http
               containerPort: {{ .Values.auth.service.httpPort }}
         env:
+          - name: TZ
+            value: {{ template "openstad.timezone" . }}
+
           # HOSTING
           - name: APP_URL
             value: https://{{ template "openstad.auth.url" . }}

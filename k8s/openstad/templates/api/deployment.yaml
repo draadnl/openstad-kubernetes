@@ -22,6 +22,9 @@ spec:
       {{- include "openstad.imagePullSecret" . | nindent 6 }}
       containers:
         - env:
+          - name: TZ
+            value: {{ template "openstad.timezone" . }}
+
           - name: API_URL
             value: https://{{ template "openstad.api.url" . }}
 
