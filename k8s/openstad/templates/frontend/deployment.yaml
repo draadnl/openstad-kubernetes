@@ -18,6 +18,10 @@ spec:
     metadata:
       labels:
         app: {{ .Values.frontend.label }}
+{{- if .Values.frontend.podAnnotations }}
+      annotations:
+{{ toYaml .Values.frontend.podAnnotations | indent 8 }}
+{{- end }}
     spec:
       {{- include "openstad.imagePullSecret" . | nindent 6 }}
       containers:
