@@ -194,6 +194,7 @@ frontend:
 S3:
   mongoBackups: on
   dbsToBackup: api,auth,image
+  forcePathStyle: false
   endpoint:
   key:
   secret:

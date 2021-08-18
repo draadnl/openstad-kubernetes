@@ -57,6 +57,9 @@ spec:
           - name: S3_MONGO_BACKUPS
             value: "{{ .Values.S3.mongoBackups }}"
 
+          - name: S3_FORCE_PATH_STYLE
+            value: "{{ .Values.S3.forcePathStyle }}"
+
           - name: S3_ENDPOINT
             valueFrom:
               secretKeyRef:
