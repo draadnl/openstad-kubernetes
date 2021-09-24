@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feature-release-0.15.1.beta-1-b486bd1-898776759
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-854506d-1145994251
+    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-84e770e-1269019787
 image:
   deploymentContainer:
     image: openstad/image:v0.7.0
