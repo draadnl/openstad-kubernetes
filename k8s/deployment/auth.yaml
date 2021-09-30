@@ -63,7 +63,7 @@ spec:
               openssl x509 -req -in ./certrequest.csr -signkey ./privatekey.pem -days 3650 -out ./certificate.pem;
               echo "Certificates are generated";
               ls -ltra;
-              kubectl delete secret openstad-auth-certificates;
+              kubectl -n "$KUBERNETES_NAMESPACE" delete secret openstad-auth-certificates;
               echo "Creating keys in namespace $KUBERNETES_NAMESPACE";
               kubectl -n "$KUBERNETES_NAMESPACE" create secret generic openstad-auth-certificates --from-file ./privatekey.pem --from-file ./certrequest.csr --from-file ./certificate.pem;
               echo "Secrets are stored";

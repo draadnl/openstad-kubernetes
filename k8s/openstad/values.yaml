@@ -141,6 +141,8 @@ frontend:
 
   cookieMaxAge:
 
+  openstadComponentsUrl:
+
   # Ingress settings:
   # Configure how the service is accessed
   ingress:
@@ -194,6 +196,7 @@ frontend:
 S3:
   mongoBackups: on
   dbsToBackup: api,auth,image
+  forcePathStyle: false
   endpoint:
   key:
   secret:
@@ -201,6 +204,7 @@ S3:
 
 ## Settings for Adminer
 adminer:
+  enabled: true
   # Configure how many replicas exists of this service
   replicas: 1
 

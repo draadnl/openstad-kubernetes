@@ -21,6 +21,7 @@ spec:
         - name: certs
           secret:
             secretName: openstad-auth-certificates
+      {{- include "openstad.imagePullSecret" . | nindent 6 }}
       containers:
       - name: {{ template "openstad.auth.fullname" . }}
         image: {{ .Values.auth.deploymentContainer.image }}
@@ -33,6 +34,9 @@ spec:
             - name: http
               containerPort: {{ .Values.auth.service.httpPort }}
         env:
+          - name: TZ
+            value: {{ template "openstad.timezone" . }}
+
           # HOSTING
           - name: APP_URL
             value: https://{{ template "openstad.auth.url" . }}

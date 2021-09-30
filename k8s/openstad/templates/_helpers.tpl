@@ -175,3 +175,14 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{- define "openstad.imagePullSecret" -}}
+{{- if .Values.imagePullSecret -}}
+imagePullSecrets:
+  - name: {{ .Values.imagePullSecret }}
+{{- end -}}
+{{- end -}}
+
+{{- define "openstad.timezone" -}}
+{{- default "Europe/Amsterdam" .Values.timezone }}
+{{- end -}}

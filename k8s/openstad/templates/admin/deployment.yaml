@@ -22,6 +22,7 @@ spec:
           secret:
             secretName: openstad-auth-certificates
       serviceAccountName: openstad-ingress-sa
+      {{- include "openstad.imagePullSecret" . | nindent 6 }}
       containers:
       - name: {{ template "openstad.admin.fullname" . }}
         image: {{ .Values.admin.deploymentContainer.image }}
@@ -66,6 +67,9 @@ spec:
 
           - name: KUBERNETES_CLUSTER_ISSUER
             value: '{{ template "openstad.clusterIssuer.name" . }}'
+
+          - name: KUBERNETES_CLUSTER_ISSUER_ENABLED
+            value: '{{ .Values.clusterIssuer.enabled }}'
 
           - name: KUBERNETES_FRONTEND_SERVICE_NAME
             value: '{{ template "openstad.frontend.fullname" . }}'

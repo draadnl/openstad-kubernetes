@@ -1,4 +1,5 @@
 ---
+{{- if .Values.adminer.enabled -}}
 kind: Service
 apiVersion: v1
 metadata:
@@ -12,3 +13,4 @@ spec:
     protocol: TCP
     port: {{ .Values.adminer.service.httpPort }}
   type: ClusterIP
+{{- end -}}

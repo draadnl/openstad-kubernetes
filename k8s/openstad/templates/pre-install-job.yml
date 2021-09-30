@@ -7,7 +7,7 @@ metadata:
     # This is what defines this resource as a hook. Without this line, the
     # job is considered part of the release.
     "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "10"
+    "helm.sh/hook-weight": "-5"
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -18,7 +18,7 @@ metadata:
     # This is what defines this resource as a hook. Without this line, the
     # job is considered part of the release.
     "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "20"
+    "helm.sh/hook-weight": "-4"
 rules:
   - apiGroups: ['']
     resources: ['secrets']
@@ -33,7 +33,7 @@ metadata:
     # This is what defines this resource as a hook. Without this line, the
     # job is considered part of the release.
     "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "30"
+    "helm.sh/hook-weight": "-3"
 roleRef:
   apiGroup: ''
   kind: Role
@@ -41,6 +41,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: openstad-secrets-sa
+    namespace: {{ .Release.Namespace }}
 ---
 apiVersion: batch/v1
 kind: Job
@@ -51,11 +52,13 @@ metadata:
     # This is what defines this resource as a hook. Without this line, the
     # job is considered part of the release.
     "helm.sh/hook": pre-install
-    "helm.sh/hook-weight": "40"
+    "helm.sh/hook-weight": "-2"
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
 spec:
+  ttlSecondsAfterFinished: 600
   template:
     metadata:
+      namespace: {{ .Release.Namespace }}
       name: "{{ .Release.Name }}-batch"
     spec:
       serviceAccountName: openstad-secrets-sa
@@ -78,7 +81,6 @@ spec:
               openssl x509 -req -in ./certrequest.csr -signkey ./privatekey.pem -days 3650 -out ./certificate.pem;
               ls -ltra;
               echo "Creating keys in namespace {{ .Release.Namespace }}";
-              kubectl -n "{{ .Release.Namespace }}" delete secret openstad-auth-certificates;
-              kubectl -n "{{ .Release.Namespace }}" create secret generic openstad-auth-certificates --from-file ./privatekey.pem --from-file ./certrequest.csr --from-file ./certificate.pem;
+              kubectl -n "{{ .Release.Namespace }}" create secret generic openstad-auth-certificates --from-file ./privatekey.pem --from-file ./certrequest.csr --from-file ./certificate.pem --dry-run=client -o yaml | kubectl apply -f -;
               echo "Secrets are stored";
       restartPolicy: Never

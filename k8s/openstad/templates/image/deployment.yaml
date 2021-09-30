@@ -16,7 +16,12 @@ spec:
     metadata:
       labels:
         app: {{ .Values.image.label }}
+{{- if .Values.image.podAnnotations }}
+      annotations:
+{{ toYaml .Values.image.podAnnotations | indent 8 }}
+{{- end }}
     spec:
+      {{- include "openstad.imagePullSecret" . | nindent 6 }}
       containers:
       - name: {{ template "openstad.image.fullname" . }}
         image: {{ .Values.image.deploymentContainer.image }}
@@ -25,6 +30,8 @@ spec:
             - name: http
               containerPort: {{ .Values.image.service.httpPort }}
         env:
+          - name: TZ
+            value: {{ template "openstad.timezone" . }}
           - name: DB_HOST
             valueFrom:
               secretKeyRef:
@@ -75,6 +82,12 @@ spec:
           - mountPath: /app/images
             name: data-vol
       initContainers:
+      - name: volume-mount-fix
+        image: busybox
+        command: [ "sh", "-c", "chown -R 1000:1000 /app/images" ]
+        volumeMounts:
+          - name: data-vol
+            mountPath: /app/images
       - name: create-db-ready
         image: {{ .Values.image.deploymentContainer.image }}
         imagePullPolicy: Always
