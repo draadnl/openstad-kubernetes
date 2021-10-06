@@ -42,5 +42,5 @@ jobs:
           charts_dir: k8s/openstad
           charts_repo_url: {{ REPO_URL }}
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_TOKEN: "${{ secrets.CR_TOKEN }}"
           REPO_URL: "${{ secrets.REPO_URL }}"
