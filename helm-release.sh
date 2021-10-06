@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 install_chart_releaser() {
     if [[ ! -d "$RUNNER_TOOL_CACHE" ]]; then
