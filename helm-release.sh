@@ -26,5 +26,5 @@ install_chart_releaser() {
 install_chart_releaser
 
 cr package k8s/openstad -p k8s/helmrepo;
-cr upload --git-repo $REPO --owner $OWNER --token $CR_TOKEN -p k8s/helmrepo --skip-existing
+cr upload --git-repo openstad-kubernetes --owner $OWNER --token $CR_TOKEN -p k8s/helmrepo --skip-existing
 cr index --charts-repo https://$OWNER.github.io/openstad-kubernetes --git-repo openstad-kubernetes --owner $OWNER --token $CR_TOKEN -p k8s/helmrepo --pr --pages-branch $PAGES_BRANCH -i index.yaml
