@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - master
+      - feature/github-workflows
 
 jobs:
   test:
@@ -37,10 +38,13 @@ jobs:
           version: v3.4.0
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.2.1
-        with:
-          charts_dir: k8s/openstad
-          charts_repo_url: {{ REPO_URL }}
+        run: |
+          chmod a+x ./helm-release.sh
+          ./helm-release.sh
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_TOKEN: "${{ secrets.CR_TOKEN }}"
           REPO_URL: "${{ secrets.REPO_URL }}"
+          PAGES_BRANCH: master
+          OWNER: "${{ secrets.OWNER }}"
+
+
