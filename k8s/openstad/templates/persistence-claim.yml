@@ -16,6 +16,7 @@ spec:
       storage: {{ .Values.frontend.volumes.uploads.size }}
 {{- end }}
 ---
+{{- if (not .Values.image.S3.bucket) }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -31,3 +32,4 @@ spec:
   resources:
     requests:
       storage: {{ .Values.image.volumes.data.size }}
+{{- end }}
