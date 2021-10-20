@@ -104,12 +104,6 @@ spec:
             name: data-vol
 {{- end }}
       initContainers:
-      - name: volume-mount-fix
-        image: busybox
-        command: [ "sh", "-c", "chown -R 1000:1000 /app/images" ]
-        volumeMounts:
-          - name: data-vol
-            mountPath: /app/images
       - name: create-db-ready
         image: {{ .Values.image.deploymentContainer.image }}
         imagePullPolicy: Always
