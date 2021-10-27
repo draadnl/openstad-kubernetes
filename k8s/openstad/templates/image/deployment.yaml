@@ -68,26 +68,34 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+{{- if ( .Values.image.S3.bucket ) }}
           - name: S3_BUCKET
             valueFrom:
               secretKeyRef:
                 key: bucket
                 name: openstad-image-s3
+{{- end }}
+{{- if ( .Values.image.S3.endpoint ) }}
           - name: S3_ENDPOINT
             valueFrom:
               secretKeyRef:
                 key: endpoint
                 name: openstad-image-s3
+{{- end }}
+{{- if ( .Values.image.S3.key ) }}
           - name: S3_KEY
             valueFrom:
               secretKeyRef:
                 key: key
                 name: openstad-image-s3
+{{- end }}
+{{- if ( .Values.image.S3.secret ) }}
           - name: S3_SECRET
             valueFrom:
               secretKeyRef:
                 key: secret
                 name: openstad-image-s3
+{{- end }}
         resources:
 {{ toYaml .Values.image.resources | indent 12 }}
         readinessProbe:
