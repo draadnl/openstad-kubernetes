@@ -108,7 +108,7 @@ spec:
           periodSeconds: {{ .Values.image.probe.liveness.periodSeconds }}
 {{- if (not .Values.image.S3.bucket) }}
         volumeMounts:
-          - mountPath: /app/images
+          - mountPath: /app/files
             name: data-vol
 {{- end }}
       initContainers:
