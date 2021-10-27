@@ -95,37 +95,41 @@ spec:
                 fieldRef:
                   apiVersion: v1
                   fieldPath: metadata.namespace
-
+{{- if ( .Values.frontend.S3.bucket ) }}
             - name: APOS_S3_BUCKET
               valueFrom:
                 secretKeyRef:
                   key: bucket
                   name: openstad-frontend-s3
-
+{{- end }}
+{{- if ( .Values.frontend.S3.endpoint ) }}
             - name: APOS_S3_ENDPOINT
               valueFrom:
                 secretKeyRef:
                   key: endpoint
                   name: openstad-frontend-s3
-
+{{- end }}
+{{- if ( .Values.frontend.S3.key ) }}
             - name: APOS_S3_KEY
               valueFrom:
                 secretKeyRef:
                   key: key
                   name: openstad-frontend-s3
-
+{{- end }}
+{{- if ( .Values.frontend.S3.secret ) }}
             - name: APOS_S3_SECRET
               valueFrom:
                 secretKeyRef:
                   key: secret
                   name: openstad-frontend-s3
-
+{{- end }}
+{{- if ( .Values.frontend.S3.region ) }}
             - name: APOS_S3_REGION
               valueFrom:
                 secretKeyRef:
                   key: region
                   name: openstad-frontend-s3
-
+{{- end }}
             - name: MY_POD_IP
               valueFrom:
                 fieldRef:
