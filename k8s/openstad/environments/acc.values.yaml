@@ -12,4 +12,4 @@ api:
     image: draadnl/openstad-api:master-b4c3972-1363665526
 image:
   deploymentContainer:
-    image: openstad/image:v0.7.0
+    image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
