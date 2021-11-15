@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:feature-0.11-haarlemmermeer-streetname-as-email-3b11f49-1124819733
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-release-0.15.1.beta-1-b486bd1-898776759
+    image: draadnl/openstad-management-panel:feature-add-styling-to-login-email-c2cbc3b-1461797564
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-90784f5-1449456851
