@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:feature-like-button-module-341a4d9-1448192297
+    image: draadnl/openstad-frontend:develop-f031cf2-1489210620
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:feature-0.11-haarlemmermeer-streetname-as-email-3b11f49-1124819733
