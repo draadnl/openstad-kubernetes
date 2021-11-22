@@ -3,13 +3,13 @@ frontend:
     image: draadnl/openstad-frontend:develop-f031cf2-1489210620
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:feature-0.11-haarlemmermeer-streetname-as-email-3b11f49-1124819733
+    image: draadnl/openstad-oauth2-server:release-0.15.12-beta-7597b2c-1462084790
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-add-styling-to-login-email-c2cbc3b-1461797597
+    image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
 api:
   deploymentContainer:
     image: draadnl/openstad-api:develop-3fb3ec1-1489212672
 image:
   deploymentContainer:
-    image: openstad/image:v0.7.0
+    image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
