@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:develop-7dff528-1478065434
+    image: draadnl/openstad-frontend:feature-release-choices-guide-result-counter-stats-d462be9-1488954790
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-0.15.12-beta-7597b2c-1462084790
