@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-2a9d664-1522984129
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:develop-3fb3ec1-1489212672
+    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-bcd366d-1524729607
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
