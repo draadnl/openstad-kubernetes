@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:release-0.15.12-beta-7597b2c-1462084790
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:develop-5b1223a-1526360780
+    image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-bcd366d-1524729607
