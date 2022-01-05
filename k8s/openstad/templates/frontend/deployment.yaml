@@ -58,9 +58,9 @@ spec:
             - name: OPENSTAD_COMPONENTS_URL
               value: "{{ .Values.frontend.openstadComponentsUrl }}"
             - name: OPENSTAD_COMPONENTS_CDN
-              - value: "{{ .Values.frontend.openstadComponentsCdn }}"
+              value: "{{ .Values.frontend.openstadComponentsCdn }}"
             - name: OPENSTAD_REACT_ADMIN_CDN
-              - value: "{{ .Values.frontend.openstadReactAdminCdn }}"
+              value: "{{ .Values.frontend.openstadReactAdminCdn }}"
             - name: IMAGE_API_ACCESS_TOKEN
               valueFrom:
                 secretKeyRef:
