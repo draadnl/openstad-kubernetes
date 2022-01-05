@@ -151,6 +151,10 @@ frontend:
 
   openstadComponentsUrl:
 
+  openstadComponentsCdn:
+
+  openstadReactAdminCdn:
+
   # Ingress settings:
   # Configure how the service is accessed
   ingress:
