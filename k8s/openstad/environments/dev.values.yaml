@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:develop-4a7a2fe-1489244391
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-0.15.12-beta-7597b2c-1462084790
+    image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
