@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:develop-c99ca54-1663354383
+    image: draadnl/openstad-api:develop-960fa77-1667702157
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
