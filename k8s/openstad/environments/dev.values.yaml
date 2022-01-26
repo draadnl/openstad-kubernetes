@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-c1899dd-1750198029
+    image: draadnl/openstad-api:feature-add-backup-runner-for-k8s-cronjobs-6e15563-1751823506
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
