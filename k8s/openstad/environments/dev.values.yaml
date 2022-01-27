@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
+    image: draadnl/openstad-management-panel:master-5fe2bca-1756654629
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-allow-backup-cronjobs-to-be-run-by-a-k8s-cronjob-7e7133e-1755421037
