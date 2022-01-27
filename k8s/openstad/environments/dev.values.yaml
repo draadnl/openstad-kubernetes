@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-allow-backup-cronjobs-to-be-run-by-a-k8s-cronjob-a8739d7-1755287841
+    image: draadnl/openstad-api:feature-mongodb-s3-backup-memory-fix-1e4dd83-1755289174
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
