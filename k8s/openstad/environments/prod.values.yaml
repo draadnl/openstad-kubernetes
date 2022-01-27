@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:master-d01c89a-1756540984
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
+    image: draadnl/openstad-management-panel:master-18bc5d4-1756673328
 api:
   deploymentContainer:
     image: draadnl/openstad-api:master-ee8e88d-1755148033
