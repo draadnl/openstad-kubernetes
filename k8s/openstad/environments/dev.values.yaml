@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-mongodb-s3-backup-memory-fix-1e4dd83-1755289174
+    image: draadnl/openstad-api:feature-mongodb-s3-backup-memory-fix-5420817-1755378715
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
