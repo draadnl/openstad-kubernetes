@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:develop-cc1e766-1654216902
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-add-backup-runner-for-k8s-cronjobs-6e15563-1751823506
+    image: draadnl/openstad-api:feature-allow-backup-cronjobs-to-be-run-by-a-k8s-cronjob-a8739d7-1755287841
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
