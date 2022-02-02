@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-latest-merge-w-0-18-0-beta-a65ae7e-1667519572
+    image: draadnl/openstad-frontend:feature-allow-component-url-to-be-set-per-site-e370118-1783018246
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
