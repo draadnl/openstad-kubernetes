@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:develop-ea2f657-1758001479
+    image: draadnl/openstad-management-panel:feature-gitops-workflow-2fa-6985096-1823151900
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-add-extra-types-to-choices-guide-questions-0e32c69-1784269146
