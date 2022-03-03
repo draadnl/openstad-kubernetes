@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feature-add-styling-to-login-email-c676e9b-1823179667
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-dc04f97-1927244204
+    image: draadnl/openstad-api:feature-choices-guide-text-input-and-textarea-4b586ec-1927896621
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
