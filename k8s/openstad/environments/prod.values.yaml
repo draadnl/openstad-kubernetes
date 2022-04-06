@@ -1,15 +1,15 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:master-7212911-1363054400
+    image: draadnl/openstad-frontend:master-e370118-1783018851
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-0.15.12-beta-1047db2-1266346861
+    image: draadnl/openstad-oauth2-server:master-d01c89a-1756540984
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
+    image: draadnl/openstad-management-panel:master-2bfd307-1761432951
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:master-ee8e88d-1755148033
+    image: draadnl/openstad-api:master-2ba909f-2101291758
 image:
   deploymentContainer:
-    image: openstad/image:v0.7.0
+    image: openstad/image:v0.7.2
