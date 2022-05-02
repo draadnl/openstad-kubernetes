@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:feature-allow-component-url-to-be-set-per-site-e370118-1783018246
+    image: draadnl/openstad-frontend:feature-fix-user-displayname-not-showing-b3e9873-2256213512
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
