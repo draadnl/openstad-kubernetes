@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:master-edcc1d2-2319995638
+    image: draadnl/openstad-frontend:master-c74fda8-2971563519
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:master-a7daf98-2971519363
