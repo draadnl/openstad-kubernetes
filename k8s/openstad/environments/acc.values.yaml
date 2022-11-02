@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-carnisse-5cbc4be-3376523240
+    image: draadnl/openstad-frontend:release-carnisse-3914b10-3376732606
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-0.15.12-beta-fdeb2db-2752452461
