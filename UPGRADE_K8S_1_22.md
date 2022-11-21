@@ -3,8 +3,24 @@
 ### Backup
 ```kubectl get --all-namespaces -oyaml issuer,clusterissuer,cert > backup.yaml\n```
 
-### Upgrade to v1.2.0
-```helm upgrade --set installCRDs=true --version=v1.2.0 cert-manager jetstack/cert-manager -n cert-manager```
+### Upgrade to v1.5.3
+
+kubectl get --all-namespaces -oyaml issuer,clusterissuer,cert > backup.yaml
+
+k delete crd certificaterequests.cert-manager.io certificates.cert-manager.io challenges.acme.cert-manager.io clusterissuers.cert-manager.io issuers.cert-manager.io orders.acme.cert-manager.io
+k delete clusterrole cert-manager-cainjector cert-manager-controller-certificates cert-manager-controller-challenges cert-manager-controller-clusterissuers cert-manager-controller-ingress-shim cert-manager-controller-issuers cert-manager-controller-orders cert-manager-edit cert-manager-view
+k delete clusterrolebindings.rbac.authorization.k8s.io cert-manager-cainjector cert-manager-controller-certificates cert-manager-controller-challenges cert-manager-controller-clusterissuers cert-manager-controller-ingress-shim cert-manager-controller-issuers cert-manager-controller-orders
+k delete role -n kube-system cert-manager-cainjector:leaderelection cert-manager:leaderelection
+k delete role -n cert-manager cert-manager-webhook:dynamic-serving
+k delete -n kube-system rolebindings.rbac.authorization.k8s.io cert-manager-cainjector:leaderelection cert-manager:leaderelection
+k delete rolebindings.rbac.authorization.k8s.io -n cert-manager cert-manager-webhook:dynamic-serving
+k delete mutatingwebhookconfigurations.admissionregistration.k8s.io cert-manager-webhook
+k delete validatingwebhookconfigurations.admissionregistration.k8s.io cert-manager-webhook
+k delete apiservices v1.certificates.k8s.io v1alpha2.acme.cert-manager.io v1alpha3.acme.cert-manager.io v1beta1.acme.cert-manager.io
+
+helm -n cert-manager upgrade --version 1.5.3 cert-manager jetstack/cert-manager
+
+k apply -f backup.yaml
 
 
 ## ingress-nginx
