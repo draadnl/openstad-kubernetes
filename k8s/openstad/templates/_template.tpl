@@ -8,6 +8,7 @@
   hostport: {{ .Values.secrets.database.hostport | default 3306 | toString | b64enc }}
   password: {{ .Values.mysql.db.password | default ( randAlphaNum 12 | quote ) | b64enc }}
   username: {{ .Values.secrets.database.username | default "openstad" | b64enc }}
+  ca-cert: {{ .Values.secrets.database.caCert | default "" | b64enc }}
 {{- end }}
 
 {{- define "sessionSecret" -}}
@@ -18,6 +19,9 @@
   hostname: {{ .Values.secrets.mongodb.hostname | default (printf "%s-mongodb.%s.svc.cluster.local" .Release.Name .Release.Namespace) | b64enc }}
   hostport: {{ .Values.secrets.mongodb.hostport | default 27017 | toString | b64enc }}
   database: {{ .Values.secrets.mongodb.database | default "openstad_mongodb" | b64enc }}
+  user: {{ .Values.secrets.mongodb.user | default "" | b64enc }}
+  password: {{ .Values.secrets.mongodb.password | default "" | b64enc }}
+  auth-source: {{ .Values.secrets.mongodb.authSource | default "" | b64enc }}
 {{- end }}
 
 {{- define "cookieSecret" -}}

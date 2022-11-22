@@ -1,5 +1,6 @@
 ---
 {{- if .Values.adminer.ingress.enabled -}}
+---
 {{ $serviceName := include "openstad.adminer.fullname" . }}
 {{ $servicePort := .Values.adminer.service.httpPort }}
 {{ $tls := .Values.adminer.ingress.tls }}
@@ -24,7 +25,7 @@ metadata:
 
   name: {{ template "openstad.adminer.fullname" . }}
   namespace: {{ .Release.Namespace }}
-  
+
 spec:
   rules:
 {{- range $host := .Values.adminer.ingress.hosts }}
@@ -49,7 +50,7 @@ spec:
                 name: {{ $serviceName }}
                 port:
                   number: {{ $servicePort }}
-              
+
   tls:
     - secretName: {{ .Values.adminer.ingress.tls.secretName }}
       hosts:

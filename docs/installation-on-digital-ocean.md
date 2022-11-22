@@ -76,7 +76,7 @@ host:
 ```
 
 - update custom mysql password
-- check which containers are set, latest one currently is development (and devel for application), but be aware these are auto pushed on git updates, so it might break every know and then
+- check which containers are set, latest one currently is development (and devel for application), but be aware these are auto pushed on git updates, so it might break every now and then
 
 - Set mail server if you want login to work. By default is e-mail for now. Will move it to have a token by default
 ```
@@ -108,8 +108,6 @@ On first install keep certissuer to false;
 ## Settings for Cert-Manager/Cluster issuer
 clusterIssuer:
   enabled: false  # Whether this issuer is created
-
-```
 
 ```
 helm install --values custom-values.yaml --replace openstad . --namespace=openstad --create-namespace

@@ -130,7 +130,7 @@ frontend:
   deploymentContainer:
     name: frontend
     # Docker image for this pod
-    image: openstad/frontend:v0.14.1
+    image: openstad/frontend:v0.41.0
 
   # Optional to use an S3 for ApostropheCMS attachments.
   S3:
@@ -173,6 +173,9 @@ frontend:
     tls:
       secretName: openstad-tls-frontend
       hosts: []
+
+  # Inject extra environment variables
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -296,7 +299,7 @@ auth:
   deploymentContainer:
     name: auth
     # Docker image for this pod
-    image: openstad/auth:v0.13.0
+    image: openstad/auth:v0.41.0
 
   # Subdomain for the service:
   # If filled it it will create a default url of: www.$subdomain.$baseurl
@@ -319,6 +322,9 @@ auth:
     tls:
       secretName: openstad-tls-auth
       hosts: []
+
+  # Inject extra environment variables
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -387,6 +393,9 @@ admin:
     tls:
       secretName: openstad-tls-admin
       hosts: []
+
+  # Inject extra environment variables
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -460,6 +469,9 @@ api:
       secretName: openstad-tls-api
       hosts: []
 
+  # Inject extra environment variables
+  extraEnvVars: []
+
   # Resources:
   resources:
     # Max resources
@@ -532,6 +544,9 @@ image:
         secretName: openstad-tls-image
         hosts: []
 
+  # Inject extra environment variables
+  extraEnvVars: []
+
   # Resources:
   resources:
     # Max resources
@@ -602,6 +617,14 @@ secrets:
     hostname:
     hostport:
 
+    # If you want to force an SSL connection to MySQL, provide a CA cert here
+    # This should be the content of the CA cert, including `-----BEGIN CERTIFICATE-----`
+    # Most cloud providers will provide this CA cert in their documentation;
+    # Amazon: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html
+    # Azure: https://docs.microsoft.com/en-us/azure/mysql/single-server/how-to-configure-ssl
+    # Google Cloud Platform: https://cloud.google.com/sql/docs/mysql/configure-ssl-instance
+    caCert:
+
     ### Default db passwords for when you use the dependency
     rootPassword:
     replicationPassword:
@@ -663,6 +686,32 @@ secrets:
     hostname:
     hostport:
     database:
+    user:
+    password:
+
+    # The authSource allows us to specify which database is associated with the given credentials.
+    # Reference: https://www.mongodb.com/docs/manual/reference/connection-string/#mongodb-urioption-urioption.authSource
+    authSource:
+
+    # The frontendConnectionString will take priority over the above MongoDB configuration for the frontend service
+    # Use {database} in this string to allow the application to specify the correct database
+    # Reference: https://www.mongodb.com/docs/manual/reference/connection-string/
+    # Example: "mongodb://mongoadmin:mongoadmin@localhost:27017/{database}?authSource=admin"
+    frontendConnectionString:
+
+    # The authConnectionString will take priority over the above MongoDB configuration for the auth service
+    # Keep in mind that the default database for the auth environment is `sessions`
+    # If this contains the `{database}` string, this will be replaced with `sessions` before being passed into the auth service
+    # Reference: https://www.mongodb.com/docs/manual/reference/connection-string/
+    # Example: "mongodb://mongoadmin:mongoadmin@localhost:27017/sessions?authSource=admin"
+    authConnectionString:
+
+    # The adminConnectionString will take priority over the above MongoDB configuration for the admin service
+    # Use {database} in this string to allow the application to specify the correct database
+    # Reference: https://www.mongodb.com/docs/manual/reference/connection-string/
+    # Example: "mongodb://mongoadmin:mongoadmin@localhost:27017/{database}?authSource=admin"
+    adminConnectionString:
+
   basicAuth:
     user:
     password:

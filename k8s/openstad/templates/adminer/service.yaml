@@ -1,5 +1,5 @@
----
 {{- if .Values.adminer.enabled -}}
+---
 kind: Service
 apiVersion: v1
 metadata:

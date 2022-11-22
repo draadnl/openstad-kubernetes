@@ -84,10 +84,40 @@ spec:
               secretKeyRef:
                 name: openstad-db-credentials
                 key: hostport
+          - name: MYSQL_CA_CERT
+            valueFrom:
+              secretKeyRef:
+                name: openstad-db-credentials
+                key: ca-cert
+          - name: MONGO_DB_CONNECTION_STRING
+            valueFrom:
+              secretKeyRef:
+                key: auth-connection-string
+                name: mongo-secret
           - name: MONGO_DB_HOST
             valueFrom:
               secretKeyRef:
                 key: hostname
+                name: openstad-mongo-credentials
+          - name: MONGO_DB_PORT
+            valueFrom:
+              secretKeyRef:
+                key: hostport
+                name: openstad-mongo-credentials
+          - name: MONGO_DB_USER
+            valueFrom:
+              secretKeyRef:
+                key: user
+                name: openstad-mongo-credentials
+          - name: MONGO_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: mongo-secret
+          - name: MONGO_DB_AUTHSOURCE
+            valueFrom:
+              secretKeyRef:
+                key: auth-source
                 name: openstad-mongo-credentials
           - name: DB_NAME
             valueFrom:
@@ -171,6 +201,10 @@ spec:
               fieldRef:
                 fieldPath: status.podIP
 
+          {{- if .Values.auth.extraEnvVars }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.auth.extraEnvVars "context" $) | nindent 10 }}
+          {{- end }}
+
         resources:
 {{ toYaml .Values.auth.resources | indent 12 }}
         readinessProbe:
@@ -213,6 +247,9 @@ spec:
               name: mysql-secret
               key: mysql-password
         - name: DB_NAME
-          value: auth
+          valueFrom:
+              secretKeyRef:
+                name: openstad-auth-db
+                key: database
         command: ["/bin/sh","-c"]
         args: ['knex migrate:latest']
