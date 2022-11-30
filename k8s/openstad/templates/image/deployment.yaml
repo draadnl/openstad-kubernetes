@@ -101,7 +101,6 @@ spec:
                 key: secret
                 name: openstad-image-s3
 {{- end }}
-          -
           {{- if .Values.image.extraEnvVars }}
           {{- include "common.tplvalues.render" (dict "value" .Values.image.extraEnvVars "context" $) | nindent 10 }}
           {{- end }}
