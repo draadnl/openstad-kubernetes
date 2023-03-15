@@ -1,15 +1,15 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:master-c74fda8-2971563519
+    image: openstad/frontend:master-8037101
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:master-a7daf98-2971519363
+    image: openstad/auth:master-4e73a11
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:master-ac1267b-2971589414
+    image: openstad/admin:master-197ff35
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:master-f29dbe3-2971535533
+    image: openstad/api:master-7d201f4
 image:
   deploymentContainer:
-    image: openstad/image:v0.7.2
+    image: openstad/image:release-ea13ba0
