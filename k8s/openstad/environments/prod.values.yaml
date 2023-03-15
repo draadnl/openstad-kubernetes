@@ -12,4 +12,4 @@ api:
     image: openstad/api:master-7d201f4
 image:
   deploymentContainer:
-    image: openstad/image:release-ea13ba0
+    image: openstad/image:v0.40.0
