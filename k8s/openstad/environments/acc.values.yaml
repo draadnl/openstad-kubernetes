@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-alphen-a9839c2-5288237833
+    image: draadnl/openstad-frontend:release-kaag-8b30648-5311079877
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-dhv3-d017692-4740543625
