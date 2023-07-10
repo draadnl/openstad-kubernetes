@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-emmen-72b71d1-5509761738
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-0.15.12-beta-52d329f-5332744685
+    image: draadnl/openstad-oauth2-server:release-emmen-131c644-5509927380
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
