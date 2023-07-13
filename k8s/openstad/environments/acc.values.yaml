@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-emmen-72b71d1-5509761738
+    image: draadnl/openstad-frontend:release-denhaag-80915b9-5543648661
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-emmen-131c644-5509927380
