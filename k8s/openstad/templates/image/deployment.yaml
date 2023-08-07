@@ -145,8 +145,7 @@ spec:
               name: mysql-secret
               key: mysql-password
         command: ["/bin/sh","-c"]
-        args:
-            - nc $DB_HOST 3306 -z -w1 && node migrate.js;
+        args: ['knex migrate:latest']
 {{- if (not .Values.image.S3.bucket) }}
       volumes:
         - name: data-vol
