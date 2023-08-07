@@ -6,11 +6,11 @@ dependencies:
   condition: dependencies.cert-manager.enabled
 
 - name: mongodb
-  version: "13.1.7"
-  repository: "https://charts.bitnami.com/bitnami"
+  version: "7.14.5"
+  repository: "https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami"
   condition: dependencies.mongodb.enabled
   image:
-    tag: 5.0.13-debian-11-r5
+    tag: 4.0.14-ol-7-r39
 
 - name: mysql
   version: "9.4.1"
