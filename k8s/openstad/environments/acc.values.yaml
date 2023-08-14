@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-duiven-af3580e-5856372297
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-emmen-131c644-5509927380
+    image: draadnl/openstad-oauth2-server:release-0.15.12-beta-35ce39f-5857069475
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
