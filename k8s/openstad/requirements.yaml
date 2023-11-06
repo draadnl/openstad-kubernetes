@@ -28,4 +28,4 @@ dependencies:
 
 - name: common
   version: "2.0.3"
-  repository: https://charts.bitnami.com/bitnami
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
