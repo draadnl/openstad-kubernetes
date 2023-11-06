@@ -7,16 +7,16 @@ dependencies:
 
 - name: mongodb
   version: "13.1.7"
-  repository: "https://charts.bitnami.com/bitnami"
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
   condition: dependencies.mongodb.enabled
   image:
     tag: 5.0.13-debian-11-r5
 
 - name: mysql
   version: "9.4.1"
-  repository: "https://charts.bitnami.com/bitnami"
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
   condition: dependencies.mysql.enabled
 
 - name: common
   version: "2.0.3"
-  repository: https://charts.bitnami.com/bitnami
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
