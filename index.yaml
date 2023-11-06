@@ -82,14 +82,14 @@ entries:
       version: 0.15.1
     - condition: dependencies.mongodb.enabled
       name: mongodb
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 13.1.7
     - condition: dependencies.mysql.enabled
       name: mysql
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 9.4.1
     - name: common
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -113,10 +113,10 @@ entries:
       version: 7.14.5
     - condition: dependencies.mysql.enabled
       name: mysql
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 9.4.1
     - name: common
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -143,7 +143,7 @@ entries:
       repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
       version: 6.14.2
     - name: common
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -170,7 +170,7 @@ entries:
       repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
       version: 6.14.2
     - name: common
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -197,7 +197,7 @@ entries:
       repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
       version: 6.14.2
     - name: common
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -217,11 +217,11 @@ entries:
       version: 0.15.1
     - condition: dependencies.mongodb.enabled
       name: mongodb
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 7.14.5
     - condition: dependencies.mysql.enabled
       name: mysql
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 6.14.2
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
@@ -240,11 +240,11 @@ entries:
       version: 0.15.1
     - condition: dependencies.mongodb.enabled
       name: mongodb
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 7.14.5
     - condition: dependencies.mysql.enabled
       name: mysql
-      repository: https://charts.bitnami.com/bitnami
+      repository: https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami
       version: 6.14.2
     description: This chart deploys the OpenStad  project with optional databases.
     digest: 4a66a0e0173365328738729bb4534776ae05ada3827ff1873af35a94828f8dfb
