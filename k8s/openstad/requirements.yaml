@@ -7,7 +7,7 @@ dependencies:
 
 - name: mongodb
   version: "7.14.5"
-  repository: "https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami"
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
   condition: dependencies.mongodb.enabled
   image:
     ## Bitnami MongoDB registry
@@ -23,5 +23,5 @@ dependencies:
 
 - name: mysql
   version: "6.14.2"
-  repository: "https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami"
+  repository: "https://raw.githubusercontent.com/bitnami/charts/6a4e731c923d721c2f36ae85bf3e6cabbfd480a4/bitnami"
   condition: dependencies.mysql.enabled
