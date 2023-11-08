@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feature-gitops-workflow-2fa-80a49f4-2745778639
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-db72567-5323339903
+    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-d394a1b-6798245134
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
