@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:develop-8c08c08-1663398735
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-gitops-workflow-2fa-80a49f4-2745778639
+    image: draadnl/openstad-management-panel:feature-westland-test-7cec66d-6960098626
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-d394a1b-6798245134
