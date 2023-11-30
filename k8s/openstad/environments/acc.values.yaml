@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:release-wolkenstad-20-11-e8eaa1c-6930050231
+    image: draadnl/openstad-api:release-0.16.1-beta-92c2192-7048038074
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
