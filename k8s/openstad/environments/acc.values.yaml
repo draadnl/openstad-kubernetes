@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:release-kaag-en-braassem-allow-multiple-logins-38c58fe-6968931352
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-gitops-workflow-310003d-527479285
+    image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
 api:
   deploymentContainer:
     image: draadnl/openstad-api:release-0.16.1-beta-92c2192-7048038074
