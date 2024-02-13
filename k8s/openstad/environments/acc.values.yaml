@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:release-haarlemmermeer-40a2424-7815957719
+    image: draadnl/openstad-api:release-wolkenstad-20-11-d899a02-7884981342
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
