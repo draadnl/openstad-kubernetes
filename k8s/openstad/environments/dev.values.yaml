@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feature-westland-test-7cec66d-6960098626
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-6a74ff2-7830551525
+    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-e40041e-7902681357
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
