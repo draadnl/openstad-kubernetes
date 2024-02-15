@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-kaag-668fb1f-7816852360
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-kaag-en-braassem-allow-multiple-logins-38c58fe-6968931352
+    image: draadnl/openstad-oauth2-server:release-veenendaal-allow-multiple-logins-80c132a-7913942220
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
