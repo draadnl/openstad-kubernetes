@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:release-veenendaal-2802-24ec0e7-8046284880
+    image: draadnl/openstad-api:release-0.16.2-beta-288264c-8047015790
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
