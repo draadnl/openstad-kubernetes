@@ -12,4 +12,4 @@ api:
     image: draadnl/openstad-image-server:master-23658b6-9091969978
 image:
   deploymentContainer:
-    image: draadnl/openstad-image-server:master-4def562-9092002604
+    image: draadnl/openstad-image-server:master-2ee1905-9092201391
