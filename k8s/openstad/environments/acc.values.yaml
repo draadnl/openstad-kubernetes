@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:release-apeldoorn-2024-54584fc-8816862218
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:release-emmen-2019a00-9222158827
+    image: draadnl/openstad-oauth2-server:release-kaag-en-braassem-allow-multiple-logins-fbe2d9f-9222687909
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
