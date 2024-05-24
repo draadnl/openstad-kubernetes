@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:feature-fix-user-displayname-not-showing-d27ea19-2256662395
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:development-53da0d5-9222959448
+    image: draadnl/openstad-oauth2-server:development-afd69b3-9222989337
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feature-westland-test-7cec66d-6960098626
