@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-apeldoorn-2024-f57bcc6-9287480495
+    image: draadnl/openstad-frontend:release-apeldoorn-2024-1881f79-9287610848
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-wolkenstad-281b080-9283771477
