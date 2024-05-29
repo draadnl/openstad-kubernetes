@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:development-afd69b3-9222989337
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:feature-westland-test-7cec66d-6960098626
+    image: draadnl/openstad-management-panel:feat-update-mongo-2d65d33-9283400467
 api:
   deploymentContainer:
     image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-5fe762c-7903398222
