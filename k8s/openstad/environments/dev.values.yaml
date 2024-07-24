@@ -3,7 +3,7 @@ frontend:
     image: draadnl/openstad-frontend:feature-fix-user-displayname-not-showing-d27ea19-2256662395
 auth:
   deploymentContainer:
-    image: draadnl/openstad-oauth2-server:development-93e8d73-9544221448
+    image: draadnl/openstad-oauth2-server:development-f4131b2-10073348201
 admin:
   deploymentContainer:
     image: draadnl/openstad-management-panel:feat-update-mongo-2d65d33-9283400467
