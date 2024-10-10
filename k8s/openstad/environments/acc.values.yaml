@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-zwolle-d899fac-9758713633
+    image: draadnl/openstad-frontend:release-0.18.0.1-beta-6f1d7e2-11275557769
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-denhaag-044e318-10832655446
