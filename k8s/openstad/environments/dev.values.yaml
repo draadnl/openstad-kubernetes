@@ -9,7 +9,7 @@ admin:
     image: draadnl/openstad-management-panel:feat-update-mongo-2d65d33-9283400467
 api:
   deploymentContainer:
-    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-8290d37-11275072492
+    image: draadnl/openstad-api:feature-haarlemmermeer-submission-default-template-2c981fe-11275196031
 image:
   deploymentContainer:
     image: draadnl/openstad-image-server:release-files-s3-tests-812cf3e-1391832904
