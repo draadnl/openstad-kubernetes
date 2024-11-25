@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:release-denhaag-044e318-10832655446
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:release-wolkenstad-3356c5f-7194819160
+    image: draadnl/openstad-management-panel:release-haarlemmermeer-f8155c3-12011157294
 api:
   deploymentContainer:
     image: draadnl/openstad-api:release-0.16.1-beta-35e7986-9517792582
