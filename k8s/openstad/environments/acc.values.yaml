@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-haarlemmermeer-5fdd646-11517214579
+    image: draadnl/openstad-frontend:release-0.18.0.1-beta-384ffff-12391061055
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-upstream-master-03b3a54-12390853497
