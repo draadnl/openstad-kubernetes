@@ -1,6 +1,6 @@
 frontend:
   deploymentContainer:
-    image: draadnl/openstad-frontend:release-duiven-05254e8-12409700280
+    image: draadnl/openstad-frontend:release-duiven-a57132e-12410039165
 auth:
   deploymentContainer:
     image: draadnl/openstad-oauth2-server:release-0.15.12-beta-ca00840-12396231405
