@@ -6,7 +6,7 @@ auth:
     image: draadnl/openstad-oauth2-server:master-56749ad-9447725281
 admin:
   deploymentContainer:
-    image: draadnl/openstad-management-panel:master-e62f6ba-9284141907
+    image: draadnl/openstad-management-panel:master-3dd62b5-13050017606
 api:
   deploymentContainer:
     image: draadnl/openstad-image-server:master-23658b6-9091969978
